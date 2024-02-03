@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!--boxicons link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/8952cbb0a1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h2>Portfolio</h2>
+        <div class="nav">
+            <a href="#hero">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+     <!-- Home -->
+    <section class="home" id="hero"> 
+        <div class="home-content">
+            <h1>Hello, I'm <span>Glaiza Maylan</span></h1>
+            <h3>Bachelor of Science in Information Technology</h3>
+            <p>I am an aspiring IT professional who values excellence in all that I do.
+            With a strong passion for technology and a commitment to ongoing learning,
+            I strive to make a positive impact in the IT field through continuous
+            improvement and collaboration.</p>
+            <div class="btn-box">
+                <a href="#about" class="btn">About Me</a> 
+                <a href="#projects" class="btn">Projects</a> 
+            </div>
+        </div>
+
+        <div class="home-img">
+            <img src="face.jpg">
+        </div>
+    </section>
+
+     <!-- About Me -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="back.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="text">About Me</h1>
+                    <p>This portfolio showcases my skills honed through teamwork and a love for learning.
+                    I excel in collaborative environments, believingin the power of "we" not "me."
+                    Adaptability and a collaborative spirit are my superpowers,helping me build awesome things with others. 
+                    </p>
+
+                    <div class="sub-text">
+                        <p class="sub-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="sub-links" onclick="opentab('skills')">Skills</p>
+                    </div>
+                    <div class="sub-contents active-tab" id="education">
+                        <ul>
+                            <li><span>2022 - Present</span><br>University of Pangasinan</li>
+                            <li><span>2nd Year Student</span><br>Information Technology</li>
+                        </ul>
+                    </div>
+                    <div class="sub-contents" id="skills">
+                        <ul>
+                            <li><span>Programming Languages</span><br>Python</li>
+                            <li><span>Frameworks</span><br>HTML and CSS<br>Laravel</li>
+                            <li><span>Others</span><br>Canva<br>Google Docs<br>Microsoft Word</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Projects -->
+    <section id="projects">
+        <div class="container">
+            <h1 class="text">Projects</h1>
+            <div class="project-list">
+                <div class="project">
+                    <img src="cozy den.png">
+                    <div class="layer">
+                        <h3>Cozy Den</h3>
+                        <p>An interior design website dedicated to helping people create warm, inviting,
+                        and personalized living spaces.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="find my pair.png">
+                    <div class="layer">
+                        <h3>Find My Pair</h3>
+                        <p>Find Your Pair invites you to escape the ordinary and embark on a calming journey of matching colors</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="serviceu.png">
+                    <div class="layer">
+                        <h3>Serviceu</h3>
+                        <p>Your one-stop solution for all your home service needs, offering a convenient and reliable platform to connect
+                        with trusted professionals right at your fingertips. </p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="module distribution.png">
+                    <div class="layer">
+                        <h3>Upickup</h3>
+                        <p>Ongoing</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer id="contact">
+        <div class="text-center">
+            <p>Get In Touch</p>
+            <h3>glta.maylan@phinmaed.com</h3>
+            <div class="socials"> 
+                <a href="https://www.facebook.com/glaiza.maylan/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/GlzDrlMayln"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/glaizadarlene-maylan-1b0296257/"><i class="fa-brands fa-linkedin"></i></a> 
+            </div>          
+        </div>
+    </footer>
+
+
+    <script>
+
+        var sublinks = document.getElementsByClassName("sub-links");
+        var subcontents = document.getElementsByClassName("sub-contents");
+        
+        function opentab(subname){
+            for(sublink of sublinks){
+                sublink.classList.remove("active-link");
+            }
+            for(subcontent of subcontents){
+                subcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(subname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>
